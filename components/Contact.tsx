@@ -52,7 +52,7 @@ export default function Contact() {
               <h2 className="text-white title-font font-semibold tracking-widest text-xs">
                 ADDRESS
               </h2>
-              <p className=" mt-1 text-nowrap">Oakville, Ontario, Canada</p>
+              <p className=" mt-1 text-nowrap">Burlington, Ontario, Canada</p>
 
               <h2 className="text-white title-font font-semibold tracking-widest text-xs  mt-4">
                 EMAIL

@@ -49,27 +49,90 @@ export const projects = [
   // },
 ];
 
-export const skills = [
-  "JavaScript",
-  "React",
-  "HTML/CSS",
-  "Bootstrap",
-  "Tailwind CSS",
-  "Python",
-  "SQL",
-  "GitHub",
-];
+export const frontendSkills = {
+  title: "Frontend Development",
+  description:
+    "Expertise in building responsive, accessible, and high-performance user interfaces using modern web technologies.",
+  skills: [
+    "JavaScript (ES6+)",
+    "Typescript",
+    "ReactJS",
+    "NextJS",
+    "Framer Motion",
+    "Leaflet",
+    "HTML5/CSS3",
+    "Tailwind CSS",
+    "Bootstrap",
+    "SASS",
+    "Responsive Design",
+    "WCAG/AODA Accessibility",
+    "State Management",
+    "SEO Management",
+    "Performance Optimization",
+    "Single Page Applications (SPA)",
+    "SiteMaps and Robots.txt",
+  ],
+};
+
+export const backendSkills = {
+  title: "Backend Development",
+  description:
+    "Experience in developing robust server-side logic, architecting RESTful APIs, and managing diverse database systems.",
+  skills: [
+    "NodeJS",
+    "ExpressJS",
+    "Python",
+    "REST APIs",
+    "Web API",
+    "Pocketbase",
+    "SQL",
+    "SQL Server",
+    "GraphQL",
+    "MongoDB",
+    "Google Cloud Platform",
+    "AWS",
+    "Firebase",
+    "Deployment and Hosting",
+  ],
+};
+
+export const tools = {
+  title: "Tools & Platforms",
+  description:
+    "Proficiency in industry-standard tools for version control, UI/UX design, task management, and cloud deployment.",
+  skills: [
+    "GitHub",
+    "Postman",
+    "Figma",
+    "Jira",
+    "Linux Server",
+    "Apache",
+    "Chrome Dev Tools",
+    "Lighthouse",
+    "Cloudfare",
+    "VS Code",
+    "Vercel",
+    "Netlify",
+    "AI Assistant",
+    "ChatGPT",
+    "OpenAI",
+    "Gemini",
+    "Microsoft Copilot",
+    "Agile Methodology",
+  ],
+};
 
 export const education = [
   "Bachelors of Technology - Computer Science (2002-2006)",
-  "HTML, CSS, and Javascript for Web Developers (John Hopkins University)",
-  "Object Oriented Programming using Python (Infosys Springboard)",
-  "Scrum Fundamental Certification (SCRUMstudy)",
+  "World Wide Vibes Hackathon (GenAI Works)",
+  "Accessibility for Ontarians with Disabilities Act (AODA) Training ",
   "Career Essentials in Generative AI by Microsoft and LinkedIn",
+  "HTML, CSS, and Javascript for Web Developers (John Hopkins University)",
 ];
 
 export const experience = [
-  "Freelancer - Remote (July 2022 - Present)",
+  "Full Stack Developer - Freelance (July 2022 - Present)",
+  "Senior Software Engineer - The Citizen Project (Sep 2024 - Aug 2025)",
   "Senior Software Engineer - Open Solutions (October 2010 - May 2012)",
   "Software Engineer - MS Technology Pvt Ltd (July 2006 - October 2010)",
 ];

@@ -2,24 +2,24 @@ export default function About() {
   return (
     <section id="about" className=" lg:pt-16">
       <div className="container mx-auto flex px-10 py-20 items-center flex-col md:flex-row">
-        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-20 items-center text-center">
+        <div className="lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-20 items-center text-center">
           <br />
           <h1 className=" title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Hi 👋, I am Garima Shingal.
             <br />
-            Frontend developer
+            Full Stack developer
           </h1>
           <br />
           <br />
 
           <p className="mb-8 leading-relaxed">
-            I am a software developer with 6+ years of experience in various
-            organizations. After a career break to care for my family, I am now
-            eager to re-enter the tech industry. I specialize in developing
-            responsive web applications using HTML, CSS, JavaScript, React,
-            Bootstrap, and Tailwind CSS. I am passionate about learning new
-            technologies, keeping up with the latest industry trends and
-            standards.
+            I am a dedicated Full-Stack Developer with 8+ years of professional
+            experience in various organizations, specializing in building
+            highly responsive and accessible applications using HTML, CSS,
+            JavaScript, React, and Next.js, backed by solid backend expertise in
+            Node.js and RESTful APIs. I am passionate about continuous learning
+            and keeping pace with evolving industry trends to deliver
+            cutting-edge digital solutions.
           </p>
 
           <div className="flex justify-center">
