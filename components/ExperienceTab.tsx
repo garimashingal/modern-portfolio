@@ -3,7 +3,7 @@ import { experience } from "../data";
 export default function ExperienceTab() {
   return (
     <>
-      <h2>Education & Certification</h2>
+      <h2>Experience</h2>
       <div className="flex mx-auto lg:w-4/5 sm:w-auto mt-10 items-center justify-center flex-col">
         {experience.map((exp) => {
           return (

@@ -1,52 +1,54 @@
 export const projects = [
   {
     title: "Restaurant website",
-    subtitle: "HTML/CSS, Bootstrap and Javascript",
+    subtitle: "HTML/CSS, Bootstrap, JS",
     description:
-      "This website is built with modern web technologies, ensuring a seamless browsing experience. JSON files are used to dynamically load content, making updates easy and efficient.",
+      "A modern, responsive restaurant platform with dynamic content loading from JSON. Features a seamless SPA experience with elegant menus and reservation sections.",
     image: "bistro.gif",
+    technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
     link: "https://garimashingal.github.io/myProjects/Restraunt%20Website%20-%20SPA/index.html",
+    github: "https://github.com/garimashingal/myProjects/tree/main/Restraunt%20Website%20-%20SPA",
   },
   {
-    title: "E-learning website",
-    subtitle: "HTML/CSS, Bootstrap and Javascript",
+    title: "Shine Learning Academy",
+    subtitle: "E-Learning Platform",
     description:
-      "This E-Learning website is a dynamic and user-friendly platform designed in HTML/CSS, Bootstrap and Javascript to facilitate online education.",
+      "A comprehensive educational platform designed to facilitate online learning with a user-friendly interface and responsive design elements.",
     image: "shineacademy.gif",
+    technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
     link: "https://garimashingal.github.io/myProjects/Shine_Learning_Academy/",
+    github: "https://github.com/garimashingal/myProjects/tree/main/Shine_Learning_Academy",
   },
   {
     title: "Investment Calculator",
-    subtitle: "React",
+    subtitle: "Financial Tool",
     description:
-      "This is an investment calculator used to generate the details of the profit earned during the course of time.",
+      "A precise tool or application for calculating investment returns and visualizing profit growth over time, built with React state management.",
     image: "investment_calculator.gif",
+    technologies: ["React", "JavaScript", "CSS3"],
     link: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/Investment-Calculator",
+    github: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/Investment-Calculator",
   },
   {
-    title: "Monthly Expenses",
-    subtitle: "React and Javascript",
+    title: "Monthly Expenses Tracker",
+    subtitle: "React App",
     description:
-      "This app is used to add monthly expenses and display them in the form of chart. User can also filter the expenses year wise.",
+      "Track your finances with ease. This application allows users to add expenses, filter by year, and visualize monthly spending through interactive charts.",
     image: "expenses_chart.gif",
+    technologies: ["React", "JavaScript", "Chart.js", "CSS3"],
     link: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/expense_list_app",
+    github: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/expense_list_app",
   },
   {
     title: "Tic-Tac-Toe",
-    subtitle: "React and Javascript",
+    subtitle: "Classic Game",
     description:
-      "Tic Tac Toe game is an interactive and engaging implementation of the classic game, built using React and JavaScript, providing an enjoyable user experience.",
+      "An interactive and engaging implementation of the classic game, featuring real-time game state management and a polished UI.",
     image: "tic-tac-toe.gif",
+    technologies: ["React", "JavaScript", "CSS3"],
     link: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/tic-tac-toe",
+    github: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/tic-tac-toe",
   },
-  // {
-  //   title: "Phone Directory",
-  //   subtitle: "React and Javascript",
-  //   description:
-  //     "This is an app used to create and manage contacts in a phone directory.",
-  //   image: "directory.gif",
-  //   link: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/phone-directory",
-  // },
 ];
 
 export const frontendSkills = {
