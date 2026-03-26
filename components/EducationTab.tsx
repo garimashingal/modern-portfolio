@@ -12,23 +12,29 @@ export default function EducationTab() {
         <div className="h-1 w-20 bg-green-500 rounded mt-2"></div>
       </div>
 
-      <div className="flex mx-auto lg:w-4/5 sm:w-auto mt-10 items-center justify-center flex-col space-y-4">
+      <ul
+        className="flex mx-auto lg:w-4/5 sm:w-auto mt-10 items-center justify-center flex-col space-y-4"
+        aria-label="Education and certification list"
+      >
         {education.map((edu, index) => {
           return (
-            <div
+            <li
               key={index}
               className="w-full text-left p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-green-500/50 transition-all duration-300 group shadow-lg flex items-center space-x-4"
             >
-              <div className="p-2 bg-green-500/10 rounded-lg group-hover:scale-110 transition-transform duration-300">
+              <div
+                className="p-2 bg-green-500/10 rounded-lg group-hover:scale-110 transition-transform duration-300"
+                aria-hidden="true"
+              >
                 <AcademicCapIcon className="w-6 h-6 text-green-500" />
               </div>
               <span className="text-white title-font font-medium text-lg lg:text-xl group-hover:text-green-400 transition-colors duration-300">
                 {edu}
               </span>
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
 }

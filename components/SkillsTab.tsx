@@ -17,20 +17,32 @@ export default function SkillsTab() {
     "lg:w-40 w-28 rounded mr-2 p-2 text-white bg-green-500 border-0 focus:outline-none text-lg";
   return (
     <div className="container w-full text-center mx-auto">
-      <div id="tabs" className="flex justify-center items-center text-center">
+      <div id="tabs" className="flex justify-center items-center text-center" role="tablist" aria-label="Skills, Experience, and Education tabs">
         <button
+          id="tab-1"
+          role="tab"
+          aria-selected={toggleTab === 1}
+          aria-controls="panel-1"
           className={toggleTab === 1 ? activeTabClass : tabClasses}
           onClick={() => setToggleTab(1)}
         >
           Skills
         </button>
         <button
+          id="tab-2"
+          role="tab"
+          aria-selected={toggleTab === 2}
+          aria-controls="panel-2"
           className={toggleTab === 2 ? activeTabClass : tabClasses}
           onClick={() => setToggleTab(2)}
         >
           Experience
         </button>
         <button
+          id="tab-3"
+          role="tab"
+          aria-selected={toggleTab === 3}
+          aria-controls="panel-3"
           className={toggleTab === 3 ? activeTabClass : tabClasses}
           onClick={() => setToggleTab(3)}
         >
@@ -39,7 +51,12 @@ export default function SkillsTab() {
       </div>
 
       <div id="tabs-content" className=" text-lg font-medium text-white mt-20">
-        <div className={toggleTab === 1 ? " " : "hidden"}>
+        <div
+          id="panel-1"
+          role="tabpanel"
+          aria-labelledby="tab-1"
+          className={toggleTab === 1 ? " " : "hidden"}
+        >
           <div className="flex flex-col items-center mb-12">
             <CpuChipIcon className="w-10 h-10 text-green-500 mb-4" />
             <h2 className="text-3xl sm:text-4xl font-bold text-white title-font">
@@ -54,11 +71,21 @@ export default function SkillsTab() {
           </div>
         </div>
 
-        <div className={toggleTab === 2 ? " " : "hidden"}>
+        <div
+          id="panel-2"
+          role="tabpanel"
+          aria-labelledby="tab-2"
+          className={toggleTab === 2 ? " " : "hidden"}
+        >
           <ExperienceTab />
         </div>
 
-        <div className={toggleTab === 3 ? " " : "hidden"}>
+        <div
+          id="panel-3"
+          role="tabpanel"
+          aria-labelledby="tab-3"
+          className={toggleTab === 3 ? " " : "hidden"}
+        >
           <EducationTab />
         </div>
       </div>

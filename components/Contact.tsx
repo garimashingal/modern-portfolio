@@ -57,7 +57,7 @@ export default function Contact() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d185586.64608004698!2d-80.00472815190449!3d43.381386720053904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b63d2965d93b7%3A0xa44a27764c2b554f!2sBurlington%2C%20ON!5e0!3m2!1sen!2sca!4v1774471311896!5m2!1sen!2sca"
             width="100%"
             height="100%"
-            className="absolute inset-0 grayscale opacity-40 hover:opacity-60 transition-opacity duration-300"
+            className="absolute inset-0 opacity-100 transition-opacity duration-300"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
@@ -107,6 +107,7 @@ export default function Contact() {
               id="name"
               name="name"
               required
+              aria-required="true"
               value={name}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-2 px-4 leading-8 transition-colors duration-200 ease-in-out"
               onChange={(e) => setName(e.target.value)}
@@ -122,6 +123,7 @@ export default function Contact() {
               id="email"
               name="email"
               required
+              aria-required="true"
               value={email}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-2 px-4 leading-8 transition-colors duration-200 ease-in-out"
               onChange={(e) => setEmail(e.target.value)}
@@ -136,6 +138,7 @@ export default function Contact() {
               id="message"
               name="message"
               required
+              aria-required="true"
               value={message}
               rows={4}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-2 px-4 resize-none leading-6 transition-colors duration-200 ease-in-out"
@@ -146,17 +149,20 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === "loading"}
+            aria-busy={status === "loading"}
             className={`text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded-lg text-lg font-semibold transition-all shadow-lg hover:shadow-green-500/20 disabled:opacity-50 disabled:cursor-not-allowed`}
           >
             {status === "loading" ? "Sending..." : "Send Message"}
           </button>
 
-          {status === "success" && (
-            <p className="text-green-400 text-sm mt-3 text-center">Form submitted successfully!</p>
-          )}
-          {status === "error" && (
-            <p className="text-red-400 text-sm mt-3 text-center">Failed to send. Please try again.</p>
-          )}
+          <div role="status" aria-live="polite" className="mt-3 text-center">
+            {status === "success" && (
+              <p id="success-message" className="text-green-400 text-sm">Form submitted successfully!</p>
+            )}
+            {status === "error" && (
+              <p id="error-message" className="text-red-400 text-sm">Failed to send. Please try again.</p>
+            )}
+          </div>
         </form>
       </div>
     </section>
