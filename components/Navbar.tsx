@@ -5,7 +5,9 @@ import DownloadResume from "./DownloadResume";
 
 export default function Navbar() {
   return (
-    <header className="bg-gray-800 md:sticky top-0 bg-opacity-80">
+    <header className="bg-gray-800 md:sticky top-0 bg-opacity-80 z-50">
+
+      {/* <header className="bg-gray-900/80 md:sticky top-0 z-50 backdrop-blur-md border-b border-gray-800"> */}
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <section className="title-font font-medium text-white hover:text-amber-400 mb-4 md:mb-0">
           <a href="#about" className="ml-3 text-xl">
@@ -51,6 +53,6 @@ export default function Navbar() {
           <ArrowRightIcon className="w-4 h-4 ml-1" />
         </a>
       </div>
-    </header>
+    </header >
   );
 }
