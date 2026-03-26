@@ -133,8 +133,32 @@ export const education = [
 ];
 
 export const experience = [
-  "Full Stack Developer - Freelance (July 2022 - Present)",
-  "Senior Software Engineer - The Citizen Project (Sep 2024 - Aug 2025)",
-  "Senior Software Engineer - Open Solutions (October 2010 - May 2012)",
-  "Software Engineer - MS Technology Pvt Ltd (July 2006 - October 2010)",
+  {
+    role: "Full Stack Developer",
+    company: "Freelance",
+    duration: "July 2022 - Present",
+    description:
+      "Developing high-performance, responsive web applications using React, Next.js, and Node.js for global clients. Specialized in building custom business solutions and e-learning platforms.",
+  },
+  {
+    role: "Senior Software Engineer",
+    company: "The Citizen Project",
+    duration: "Sep 2024 - Aug 2025",
+    description:
+      "Led full-stack engineering initiatives aimed at enhancing social engagement platforms. Architected scalable database solutions and mentored junior developers.",
+  },
+  {
+    role: "Senior Software Engineer",
+    company: "Open Solutions Software Services",
+    duration: "October 2010 - May 2012",
+    description:
+      "Managed development of enterprise software systems, focusing on performance optimization and robust backend services. Implemented core features for mission-critical applications.",
+  },
+  {
+    role: "Software Engineer",
+    company: "MS Technology Pvt Ltd",
+    duration: "July 2006 - October 2010",
+    description:
+      "Contributed to large-scale system architectures and maintained complex enterprise applications. Collaborated in cross-functional teams to deliver high-quality software solutions.",
+  },
 ];

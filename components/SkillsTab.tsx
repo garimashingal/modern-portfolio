@@ -1,6 +1,7 @@
 // import { CheckBadgeIcon } from "@heroicons/react/24/outline";
 
 import { useState } from "react";
+import { CpuChipIcon } from "@heroicons/react/24/solid";
 import FrontendSkills from "./FrontendSkills";
 import BackendSkills from "./BackendSkills";
 import Tools from "./Tools";
@@ -37,9 +38,15 @@ export default function SkillsTab() {
         </button>
       </div>
 
-      <div id="tabs-content" className=" text-lg font-medium text-white mt-10">
+      <div id="tabs-content" className=" text-lg font-medium text-white mt-20">
         <div className={toggleTab === 1 ? " " : "hidden"}>
-          <h2>Skills</h2>
+          <div className="flex flex-col items-center mb-12">
+            <CpuChipIcon className="w-10 h-10 text-green-500 mb-4" />
+            <h2 className="text-3xl sm:text-4xl font-bold text-white title-font">
+              Technical Expertise
+            </h2>
+            <div className="h-1 w-20 bg-green-500 rounded mt-2"></div>
+          </div>
           <div className="flex flex-col sm:flex-row items-center sm:items-start justify-evenly w-full sm:w-auto mt-10 space-y-12 sm:space-y-0">
             <FrontendSkills />
             <BackendSkills />
