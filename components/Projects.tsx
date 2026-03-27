@@ -4,73 +4,104 @@ import { SocialIcon } from "react-social-icons";
 
 export default function Projects() {
   return (
-    <section id="projects" className="text-gray-400 bg-gray-900 body-font py-20">
-      <div className="container px-5 mx-auto text-center lg:px-40">
-        <div className="flex flex-col w-full mb-20 text-center">
-          <CodeBracketIcon className="mx-auto inline-block w-12 mb-4 text-green-500" />
-          <h1 className="sm:text-5xl text-4xl font-bold title-font mb-4 text-white">
-            Projects I've built
-          </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-400">
-            A showcase of my recent work, featuring full-stack applications, interactive UI components, and modern web solutions.
+    <section id="projects" className="bg-[#0a0a0a] text-gray-300 py-24 overflow-hidden">
+      <div className="container px-5 mx-auto">
+        <div className="flex flex-col w-full mb-24 text-center">
+          <div className="inline-flex items-center justify-center p-3 bg-green-500/10 rounded-2xl w-fit mx-auto mb-6">
+            <CodeBracketIcon className="w-10 h-10 text-green-500" />
+          </div>
+          <h2 className="sm:text-5xl text-4xl font-extrabold title-font mb-6 text-white tracking-tight">
+            Featured Projects
+          </h2>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-xl text-gray-400 font-medium">
+            A detailed look at the specialized applications and tools I've engineered, focusing on performance, accessibility, and user experience.
           </p>
+          <div className="h-1.5 w-24 bg-green-500 mx-auto rounded-full mt-8"></div>
         </div>
 
-        <div className="flex flex-wrap -m-4">
-          {projects.map((project) => (
-            <div key={project.title} className="sm:w-1/2 w-full p-6">
-              <div className="flex relative h-80 group overflow-hidden rounded-xl border-2 border-gray-800 hover:border-green-500 transition-all duration-300">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="px-8 py-6 relative z-10 w-full bg-gray-900/95 opacity-0 group-hover:opacity-100 flex flex-col justify-center transition-opacity duration-300 backdrop-blur-sm">
-                  <h2 className="tracking-widest text-xs title-font font-semibold text-green-400 mb-1 uppercase">
-                    {project.subtitle}
-                  </h2>
-                  <h1 className="title-font text-2xl font-bold text-white mb-2">
-                    {project.title}
-                  </h1>
-                  <p className="leading-relaxed mb-4 text-sm text-gray-300">
-                    {project.description}
-                  </p>
-                  
-                  {/* Tech Stack Badges */}
-                  <div className="flex flex-wrap justify-center gap-2 mb-6">
-                    {project.technologies?.map((tech) => (
-                      <span key={tech} className="bg-gray-800 text-green-400 px-2 py-1 rounded text-[10px] font-mono border border-green-500/30">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+        <div className="space-y-32">
+          {projects.map((project, index) => (
+            <div
+              key={project.title}
+              className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""
+                }`}
+              role="article"
+              aria-labelledby={`project-title-${index}`}
+            >
+              {/* Image Side */}
+              <div className="w-full lg:w-3/5 group relative">
+                <div className="absolute -inset-2 bg-linear-to-r from-green-500/20 to-emerald-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                <div className="relative overflow-hidden rounded-2xl border border-gray-800 shadow-2xl transition-all duration-500 group-hover:border-green-500/30">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} interface preview`}
+                    className="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-gray-950/60 to-transparent pointer-events-none"></div>
+                </div>
+              </div>
 
-                  {/* Links */}
-                  <div className="flex items-center justify-center space-x-6">
+              {/* Content Side */}
+              <div className="w-full lg:w-2/5 flex flex-col space-y-6">
+                <div>
+                  <span className="text-green-500 font-bold tracking-[0.2em] text-xs uppercase mb-2 block">
+                    {project.subtitle}
+                  </span>
+                  <h3
+                    id={`project-title-${index}`}
+                    className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight"
+                  >
+                    {project.title}
+                  </h3>
+                </div>
+
+                <p className="text-lg text-gray-400 leading-relaxed font-medium">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {project.technologies?.map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-gray-800/80 text-green-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-gray-700 hover:border-green-500/30 transition-colors shadow-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap items-center gap-6 pt-6">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-white bg-green-600 px-6 py-3 rounded-xl font-bold hover:bg-green-700 transition-all shadow-lg shadow-green-600/20 active:scale-95 group/btn"
+                    aria-label={`View live demo of ${project.title}`}
+                  >
+                    Live Demo
+                    <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2 transform transition group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
+                  </a>
+
+                  {project.github && (
                     <a
-                      href={project.link}
+                      href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-white hover:text-green-400 transition-colors text-sm font-medium"
+                      className="inline-flex items-center text-gray-300 hover:text-white font-bold transition-all group/git"
+                      aria-label={`View source code of ${project.title} on GitHub`}
                     >
-                      <ArrowTopRightOnSquareIcon className="w-5 h-5 mr-1" />
-                      Live Demo
+                      <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="w-8 h-8 mr-2 group-hover/git:scale-110 transition-transform"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                      </svg>
+                      Source Code
                     </a>
-                    {project.github && (
-                      <div className="flex items-center">
-                        <SocialIcon 
-                          url={project.github} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          style={{ height: 32, width: 32 }}
-                          bgColor="transparent"
-                          fgColor="#fff"
-                          className="hover:scale-110 transition-transform"
-                        />
-                        <span className="text-white hover:text-green-400 transition-colors text-sm font-medium ml-1">Source</span>
-                      </div>
-                    )}
-                  </div>
+                  )}
                 </div>
               </div>
             </div>

@@ -3,16 +3,17 @@ import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import About from "@/components/About";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen max-w-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black dark:text-white">
-      {/* <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start"> */}
-      <main className="text-gray-400 bg-gray-900 body-font">
+    <div className="min-h-screen max-w-screen items-center justify-center bg-[#0a0a0a] font-sans text-white">
+      <main className="text-gray-400 bg-[#0a0a0a] body-font">
         <About />
         <Skills />
         <Projects />
         <Contact />
+        <Footer />
       </main>
     </div>
   );
