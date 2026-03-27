@@ -5,24 +5,24 @@ import DownloadResume from "./DownloadResume";
 
 export default function Navbar() {
   return (
-    <header className="bg-gray-800 md:sticky top-0 bg-opacity-80 z-50 backdrop-blur-sm border-b border-gray-700/50" role="banner">
+    <header className="bg-slate-800 md:sticky top-0 bg-opacity-80 z-50 backdrop-blur-sm border-b border-slate-700/50" role="banner">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <section className="title-font font-medium text-white hover:text-amber-400 mb-4 md:mb-0">
+        <section className="title-font font-medium text-white hover:text-blue-500 mb-4 md:mb-0">
           <a href="#about" className="ml-3 text-xl" aria-label="Garima Shingal - Back to top">
             Garima Shingal
           </a>
         </section>
 
-        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700 flex flex-wrap items-center text-base justify-center text-white" aria-label="Main Navigation">
-          <a href="#projects" className="mr-5 hover:text-amber-400 transition-colors focus:ring-2 focus:ring-amber-400 rounded px-1">
+        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-slate-700 flex flex-wrap items-center text-base justify-center text-white" aria-label="Main Navigation">
+          <a href="#projects" className="mr-5 hover:text-blue-500 transition-colors focus:ring-2 focus:ring-blue-500 rounded px-1">
             Projects
           </a>
 
-          <a href="#skills" className="mr-5 hover:text-amber-400 transition-colors focus:ring-2 focus:ring-amber-400 rounded px-1">
+          <a href="#skills" className="mr-5 hover:text-blue-500 transition-colors focus:ring-2 focus:ring-blue-500 rounded px-1">
             Skills
           </a>
 
-          <a href="#contact" className="mr-5 hover:text-amber-400 transition-colors focus:ring-2 focus:ring-amber-400 rounded px-1">
+          <a href="#contact" className="mr-5 hover:text-blue-500 transition-colors focus:ring-2 focus:ring-blue-500 rounded px-1">
             Contact
           </a>
           <DownloadResume />
@@ -47,7 +47,7 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="inline-flex items-center bg-gray-700 border-0 py-1 px-3 focus:outline-none hover:bg-gray-600 rounded-lg hover:text-amber-400 text-white text-base mt-4 md:mt-0 transition-all font-semibold shadow-md active:scale-95"
+          className="inline-flex items-center bg-slate-700 border-0 py-1 px-3 focus:outline-none hover:bg-slate-700 rounded-lg hover:text-blue-500 text-white text-base mt-4 md:mt-0 transition-all font-semibold shadow-md active:scale-95"
           aria-label="Hire me - Open contact section"
         >
           Hire Me

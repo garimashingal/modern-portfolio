@@ -4,19 +4,19 @@ import { SocialIcon } from "react-social-icons";
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-[#0a0a0a] text-gray-300 py-24 overflow-hidden">
+    <section id="projects" className="bg-[slate-950] text-slate-300 py-24 overflow-hidden">
       <div className="container px-5 mx-auto">
         <div className="flex flex-col w-full mb-24 text-center">
-          <div className="inline-flex items-center justify-center p-3 bg-green-500/10 rounded-2xl w-fit mx-auto mb-6">
-            <CodeBracketIcon className="w-10 h-10 text-green-500" />
+          <div className="inline-flex items-center justify-center p-3 bg-blue-500/10 rounded-2xl w-fit mx-auto mb-6">
+            <CodeBracketIcon className="w-10 h-10 text-blue-500" />
           </div>
           <h2 className="sm:text-5xl text-4xl font-extrabold title-font mb-6 text-white tracking-tight">
             Featured Projects
           </h2>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-xl text-gray-400 font-medium">
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-xl text-slate-400 font-medium">
             A detailed look at the specialized applications and tools I've engineered, focusing on performance, accessibility, and user experience.
           </p>
-          <div className="h-1.5 w-24 bg-green-500 mx-auto rounded-full mt-8"></div>
+          <div className="h-1.5 w-24 bg-blue-500 mx-auto rounded-full mt-8"></div>
         </div>
 
         <div className="space-y-32">
@@ -30,21 +30,21 @@ export default function Projects() {
             >
               {/* Image Side */}
               <div className="w-full lg:w-3/5 group relative">
-                <div className="absolute -inset-2 bg-linear-to-r from-green-500/20 to-emerald-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-700"></div>
-                <div className="relative overflow-hidden rounded-2xl border border-gray-800 shadow-2xl transition-all duration-500 group-hover:border-green-500/30">
+                <div className="absolute -inset-2 bg-linear-to-r from-blue-500/20 to-blue-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                <div className="relative overflow-hidden rounded-2xl border border-slate-800 shadow-2xl transition-all duration-500 group-hover:border-blue-500/30">
                   <img
                     src={project.image}
                     alt={`${project.title} interface preview`}
                     className="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-gray-950/60 to-transparent pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-950/60 to-transparent pointer-events-none"></div>
                 </div>
               </div>
 
               {/* Content Side */}
               <div className="w-full lg:w-2/5 flex flex-col space-y-6">
                 <div>
-                  <span className="text-green-500 font-bold tracking-[0.2em] text-xs uppercase mb-2 block">
+                  <span className="text-blue-500 font-bold tracking-[0.2em] text-xs uppercase mb-2 block">
                     {project.subtitle}
                   </span>
                   <h3
@@ -55,7 +55,7 @@ export default function Projects() {
                   </h3>
                 </div>
 
-                <p className="text-lg text-gray-400 leading-relaxed font-medium">
+                <p className="text-lg text-slate-400 leading-relaxed font-medium">
                   {project.description}
                 </p>
 
@@ -63,7 +63,7 @@ export default function Projects() {
                   {project.technologies?.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-gray-800/80 text-green-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-gray-700 hover:border-green-500/30 transition-colors shadow-sm"
+                      className="bg-slate-800/80 text-blue-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 hover:border-blue-500/30 transition-colors shadow-sm"
                     >
                       {tech}
                     </span>
@@ -75,7 +75,7 @@ export default function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-white bg-green-600 px-6 py-3 rounded-xl font-bold hover:bg-green-700 transition-all shadow-lg shadow-green-600/20 active:scale-95 group/btn"
+                    className="inline-flex items-center text-white bg-blue-600 px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 active:scale-95 group/btn"
                     aria-label={`View live demo of ${project.title}`}
                   >
                     Live Demo
@@ -87,7 +87,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-gray-300 hover:text-white font-bold transition-all group/git"
+                      className="inline-flex items-center text-slate-300 hover:text-white font-bold transition-all group/git"
                       aria-label={`View source code of ${project.title} on GitHub`}
                     >
                       <svg

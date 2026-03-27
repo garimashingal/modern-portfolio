@@ -5,7 +5,7 @@ export default function DownloadResume() {
     <a
       href="/resume.pdf"
       download="Garima_Shingal_Resume.pdf"
-      className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded hover:text-amber-400 text-white text-base mt-4 md:mt-0"
+      className="inline-flex items-center bg-slate-800 border-0 py-1 px-3 focus:outline-none hover:bg-slate-700 rounded hover:text-blue-500 text-white text-base mt-4 md:mt-0"
     >
       Download Resume
       <ArrowDownTrayIcon className="w-4 h-4 ml-1" />
