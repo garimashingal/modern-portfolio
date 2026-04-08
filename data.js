@@ -1,13 +1,44 @@
 export const projects = [
   {
-    title: "Restaurant website",
-    subtitle: "HTML/CSS, Bootstrap, JS",
+    title: "Path To Green Homes",
+    subtitle: "Residential Solar Energy Solutions",
+    description:
+      "Path To Green Homes is a tech-driven platform designed to help Indian homeowners transition to renewable energy. It functions as a marketplace and educational resource providing Solar Matching Services to homeowners, Cost Calculator and Equipment Guides.",
+    image: "bistro.gif",
+    technologies: ["Javascript", "React", "NextJS", "TailwindCSS", "Pocketbase", "Node.js", "SQL", "API Integration", "Razorpay", "Leaflet", "Framer Motion", "Responsive Design", "SEO Management", "Performance Optimization", "Single Page Applications (SPA)", "SiteMaps and Robots.txt"],
+    link: "https://pathtogreenhomes.com",
+    github: "NA",
+  },
+  {
+    title: "StormShield AI",
+    subtitle: "World Wide Vibes Hackathon 2026 Submission",
+    description:
+      "StormShield AI — Montgomery's Smart Flood & Weather Guardian is a real-time flood prediction and civic alert system designed for Montgomery, Alabama. It uses AI to predict floods and alert citizens about the danger.",
+    image: "bistro.gif",
+    technologies: ["Streamlit", "Python", "Folium (Leaflet.js Mapping)", "FastAPI", "BrightData", "ML/AI: XGBoost, Scikit-learn, Google Generative AI (Gemini 2.0 Flash)"],
+    link: "https://stormshieldai-montgomery.streamlit.app/",
+    github: "https://github.com/garimashingal/StormShieldAI",
+  },
+  {
+    title: "ChatGPT Messenger",
+    subtitle: "ChatGPT Clone",
+    description:
+      "A ChatGPT-like web application built with modern frontend technologies, featuring real-time AI chat, responsive UI, and scalable architecture.",
+    image: "bistro.gif",
+    technologies: ["Typescript", "React", "TailwindCSS", "NextJS", "OpenAI API", "NextAuthJS", "Firebase", "FireStore", "Google Cloud Platform", "API Integration", "Responsive Design"],
+    link: "https://project-jg7n4.vercel.app",
+    github: "https://github.com/garimashingal/chatgpt-messenger",
+  },
+  {
+    title: "David Chu's China Bistro",
+    subtitle: "Restaurant Website",
     description:
       "A modern, responsive restaurant platform with dynamic content loading from JSON. Features a seamless SPA experience with elegant menus and reservation sections.",
     image: "bistro.gif",
     technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
     link: "https://garimashingal.github.io/myProjects/Restraunt%20Website%20-%20SPA/index.html",
     github: "https://github.com/garimashingal/myProjects/tree/main/Restraunt%20Website%20-%20SPA",
+
   },
   {
     title: "Shine Learning Academy",
@@ -19,36 +50,36 @@ export const projects = [
     link: "https://garimashingal.github.io/myProjects/Shine_Learning_Academy/",
     github: "https://github.com/garimashingal/myProjects/tree/main/Shine_Learning_Academy",
   },
-  {
-    title: "Investment Calculator",
-    subtitle: "Financial Tool",
-    description:
-      "A precise tool or application for calculating investment returns and visualizing profit growth over time, built with React state management.",
-    image: "investment_calculator.gif",
-    technologies: ["React", "JavaScript", "CSS3"],
-    link: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/Investment-Calculator",
-    github: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/Investment-Calculator",
-  },
-  {
-    title: "Monthly Expenses Tracker",
-    subtitle: "React App",
-    description:
-      "Track your finances with ease. This application allows users to add expenses, filter by year, and visualize monthly spending through interactive charts.",
-    image: "expenses_chart.gif",
-    technologies: ["React", "JavaScript", "Chart.js", "CSS3"],
-    link: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/expense_list_app",
-    github: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/expense_list_app",
-  },
-  {
-    title: "Tic-Tac-Toe",
-    subtitle: "Classic Game",
-    description:
-      "An interactive and engaging implementation of the classic game, featuring real-time game state management and a polished UI.",
-    image: "tic-tac-toe.gif",
-    technologies: ["React", "JavaScript", "CSS3"],
-    link: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/tic-tac-toe",
-    github: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/tic-tac-toe",
-  },
+  // {
+  //   title: "Investment Calculator",
+  //   subtitle: "Financial Tool",
+  //   description:
+  //     "A precise tool or application for calculating investment returns and visualizing profit growth over time, built with React state management.",
+  //   image: "investment_calculator.gif",
+  //   technologies: ["React", "JavaScript", "CSS3"],
+  //   link: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/Investment-Calculator",
+  //   github: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/Investment-Calculator",
+  // },
+  // {
+  //   title: "Monthly Expenses Tracker",
+  //   subtitle: "React App",
+  //   description:
+  //     "Track your finances with ease. This application allows users to add expenses, filter by year, and visualize monthly spending through interactive charts.",
+  //   image: "expenses_chart.gif",
+  //   technologies: ["React", "JavaScript", "Chart.js", "CSS3"],
+  //   link: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/expense_list_app",
+  //   github: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/expense_list_app",
+  // },
+  // {
+  //   title: "Tic-Tac-Toe",
+  //   subtitle: "Classic Game",
+  //   description:
+  //     "An interactive and engaging implementation of the classic game, featuring real-time game state management and a polished UI.",
+  //   image: "tic-tac-toe.gif",
+  //   technologies: ["React", "JavaScript", "CSS3"],
+  //   link: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/tic-tac-toe",
+  //   github: "https://github.com/garimashingal/myProjects/tree/main/React%20Projects/tic-tac-toe",
+  // },
 ];
 
 export const frontendSkills = {
