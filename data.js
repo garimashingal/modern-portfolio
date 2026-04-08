@@ -110,7 +110,7 @@ export const frontendSkills = {
 export const backendSkills = {
   title: "Backend Development",
   description:
-    "Experience in developing robust server-side logic, architecting RESTful APIs, and managing diverse database systems.",
+    "Experience in developing robust server-side logic, RESTful APIs, and managing diverse database systems.",
   skills: [
     "NodeJS",
     "ExpressJS",
@@ -172,7 +172,7 @@ export const experience = [
       "Developing high-performance, responsive web applications using React, Next.js, and Node.js for global clients. Specialized in building custom business solutions and e-learning platforms.",
   },
   {
-    role: "Senior Software Engineer",
+    role: "Senior Software Developer",
     company: "The Citizen Project",
     duration: "Sep 2024 - Aug 2025",
     description:

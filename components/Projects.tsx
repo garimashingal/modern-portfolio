@@ -82,7 +82,7 @@ export default function Projects() {
                     <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2 transform transition group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
                   </a>
 
-                  {project.github && (
+                  {project.github && project.github !== "NA" && (
                     <a
                       href={project.github}
                       target="_blank"
@@ -101,6 +101,11 @@ export default function Projects() {
                       </svg>
                       Source Code
                     </a>
+                  )}
+                  {project.github === "NA" && (
+                    <span className="inline-flex items-center text-slate-300 font-bold transition-all group/git">
+                      Source Code Not Available
+                    </span>
                   )}
                 </div>
               </div>

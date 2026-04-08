@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { CpuChipIcon } from "@heroicons/react/24/outline";
 import SkillsTab from "./SkillsTab";
 
@@ -11,8 +12,11 @@ export default function Skills() {
             About Me
           </h1>
         </div>
-        <SkillsTab />
+        <Suspense fallback={<div>Loading...</div>}>
+          <SkillsTab />
+        </Suspense>
       </div>
     </section>
   );
 }
+

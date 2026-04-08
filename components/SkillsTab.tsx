@@ -7,9 +7,16 @@ import BackendSkills from "./BackendSkills";
 import Tools from "./Tools";
 import EducationTab from "./EducationTab";
 import ExperienceTab from "./ExperienceTab";
+import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 export default function SkillsTab() {
-  const [toggleTab, setToggleTab] = useState(1);
+  const searchParams = useSearchParams();
+  const [toggleTab, setToggleTab] = useState("1");
+
+  useEffect(() => {
+    setToggleTab(searchParams.get("tab") || "1");
+  }, [searchParams]);
 
   let tabClasses =
     "lg:w-40 w-28 rounded mr-2 p-2 text-white bg-slate-800 border-0 focus:outline-none text-lg";
@@ -21,30 +28,30 @@ export default function SkillsTab() {
         <button
           id="tab-1"
           role="tab"
-          aria-selected={toggleTab === 1}
+          aria-selected={toggleTab === "1"}
           aria-controls="panel-1"
-          className={toggleTab === 1 ? activeTabClass : tabClasses}
-          onClick={() => setToggleTab(1)}
+          className={toggleTab === "1" ? activeTabClass : tabClasses}
+          onClick={() => setToggleTab("1")}
         >
           Skills
         </button>
         <button
           id="tab-2"
           role="tab"
-          aria-selected={toggleTab === 2}
+          aria-selected={toggleTab === "2"}
           aria-controls="panel-2"
-          className={toggleTab === 2 ? activeTabClass : tabClasses}
-          onClick={() => setToggleTab(2)}
+          className={toggleTab === "2" ? activeTabClass : tabClasses}
+          onClick={() => setToggleTab("2")}
         >
           Experience
         </button>
         <button
           id="tab-3"
           role="tab"
-          aria-selected={toggleTab === 3}
+          aria-selected={toggleTab === "3"}
           aria-controls="panel-3"
-          className={toggleTab === 3 ? activeTabClass : tabClasses}
-          onClick={() => setToggleTab(3)}
+          className={toggleTab === "3" ? activeTabClass : tabClasses}
+          onClick={() => setToggleTab("3")}
         >
           Education
         </button>
@@ -55,7 +62,7 @@ export default function SkillsTab() {
           id="panel-1"
           role="tabpanel"
           aria-labelledby="tab-1"
-          className={toggleTab === 1 ? " " : "hidden"}
+          className={toggleTab === "1" ? " " : "hidden"}
         >
           <div className="flex flex-col items-center mb-12">
             <CpuChipIcon className="w-10 h-10 text-blue-500 mb-4" />
@@ -75,7 +82,7 @@ export default function SkillsTab() {
           id="panel-2"
           role="tabpanel"
           aria-labelledby="tab-2"
-          className={toggleTab === 2 ? " " : "hidden"}
+          className={toggleTab === "2" ? " " : "hidden"}
         >
           <ExperienceTab />
         </div>
@@ -84,7 +91,7 @@ export default function SkillsTab() {
           id="panel-3"
           role="tabpanel"
           aria-labelledby="tab-3"
-          className={toggleTab === 3 ? " " : "hidden"}
+          className={toggleTab === "3" ? " " : "hidden"}
         >
           <EducationTab />
         </div>
