@@ -1,19 +1,20 @@
 import { CodeBracketIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { projects } from "../data";
 import { SocialIcon } from "react-social-icons";
+import Image from "next/image";
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-[slate-950] text-slate-300 py-24 overflow-hidden">
+    <section id="projects" className="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-300 py-24 overflow-hidden transition-colors duration-300">
       <div className="container px-5 mx-auto">
         <div className="flex flex-col w-full mb-24 text-center">
           <div className="inline-flex items-center justify-center p-3 bg-blue-500/10 rounded-2xl w-fit mx-auto mb-6">
             <CodeBracketIcon className="w-10 h-10 text-blue-500" />
           </div>
-          <h2 className="sm:text-5xl text-4xl font-extrabold title-font mb-6 text-white tracking-tight">
+          <h2 className="sm:text-5xl text-4xl font-extrabold title-font mb-6 text-foreground tracking-tight transition-colors">
             Featured Projects
           </h2>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-xl text-slate-400 font-medium">
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-xl text-slate-600 dark:text-slate-400 font-medium transition-colors">
             A detailed look at the specialized applications and tools I've engineered, focusing on performance, accessibility, and user experience.
           </p>
           <div className="h-1.5 w-24 bg-blue-500 mx-auto rounded-full mt-8"></div>
@@ -30,14 +31,20 @@ export default function Projects() {
             >
               {/* Image Side */}
               <div className="w-full lg:w-3/5 group relative">
-                <div className="absolute -inset-2 bg-linear-to-r from-blue-500/20 to-blue-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-700"></div>
-                <div className="relative overflow-hidden rounded-2xl border border-slate-800 shadow-2xl transition-all duration-500 group-hover:border-blue-500/30">
-                  <img
+                <div className="absolute -inset-2 bg-linear-to-r from-blue-500/10 dark:from-blue-500/20 to-blue-500/10 dark:to-blue-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                <div className="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl transition-all duration-500 group-hover:border-blue-500/30">
+                  {project.image !== "NA" ? (<Image
                     src={project.image}
                     alt={`${project.title} interface preview`}
+                    width={1000}
+                    height={1000}
                     className="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-slate-950/60 to-transparent pointer-events-none"></div>
+                  />) : <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-slate-600 dark:text-slate-400 font-medium transition-colors">
+                      Coming Soon
+                    </span>
+                  </div>}
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-950/40 dark:from-slate-950/60 to-transparent pointer-events-none"></div>
                 </div>
               </div>
 
@@ -49,13 +56,13 @@ export default function Projects() {
                   </span>
                   <h3
                     id={`project-title-${index}`}
-                    className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight"
+                    className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight leading-tight transition-colors"
                   >
                     {project.title}
                   </h3>
                 </div>
 
-                <p className="text-lg text-slate-400 leading-relaxed font-medium">
+                <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium transition-colors">
                   {project.description}
                 </p>
 
@@ -63,7 +70,7 @@ export default function Projects() {
                   {project.technologies?.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-slate-800/80 text-blue-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 hover:border-blue-500/30 transition-colors shadow-sm"
+                      className="bg-slate-100 dark:bg-slate-800/80 text-blue-600 dark:text-blue-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-200 dark:border-slate-700 hover:border-blue-500/30 transition-colors shadow-sm"
                     >
                       {tech}
                     </span>
@@ -82,12 +89,12 @@ export default function Projects() {
                     <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2 transform transition group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
                   </a>
 
-                  {project.github && project.github !== "NA" && (
+                  {project.github && project.github !== "NA" ? (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-slate-300 hover:text-white font-bold transition-all group/git"
+                      className="inline-flex items-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-bold transition-all group/git"
                       aria-label={`View source code of ${project.title} on GitHub`}
                     >
                       <svg
@@ -101,12 +108,9 @@ export default function Projects() {
                       </svg>
                       Source Code
                     </a>
-                  )}
-                  {project.github === "NA" && (
-                    <span className="inline-flex items-center text-slate-300 font-bold transition-all group/git">
-                      Source Code Not Available
-                    </span>
-                  )}
+                  ) : <span className="inline-flex items-center text-slate-600 dark:text-slate-300 font-bold transition-all group/git">
+                    Source Code Not Available
+                  </span>}
                 </div>
               </div>
             </div>
@@ -114,5 +118,6 @@ export default function Projects() {
         </div>
       </div>
     </section>
+
   );
 }

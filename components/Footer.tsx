@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-[slate-950] text-slate-500 py-8 border-t border-slate-800">
+    <footer className="bg-slate-50 dark:bg-slate-950 text-slate-600 dark:text-slate-500 py-8 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
       <div className="container mx-auto px-5 flex flex-col items-center">
         <p className="text-sm text-center">
           © {currentYear} Garima Shingal. All Rights Reserved.

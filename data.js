@@ -1,10 +1,20 @@
 export const projects = [
   {
+    title: "AI Interview Simulator",
+    subtitle: "AI Interview Simulator",
+    description:
+      "AI Interview Simulator is a tech-driven platform performant, scalable, voice-first interview simulation platform using LLM to provide high-fidelity feedback to users based on specific Job Descriptions (JDs).",
+    image: "NA",
+    technologies: ["Typescript", "React", "NextJS", "TailwindCSS", "MongoDB", "API Integration", "Framer Motion", "Zustand", "Auth.js", "Cloudfare", "Gemini 2.5 Flash Lite", "Text-to-Speech", "Speech-to-Text", "Vercel"],
+    link: "NA",
+    github: "https://github.com/garimashingal/Interview-Simulator",
+  },
+  {
     title: "Path To Green Homes",
     subtitle: "Residential Solar Energy Solutions",
     description:
       "Path To Green Homes is a tech-driven platform designed to help Indian homeowners transition to renewable energy. It functions as a marketplace and educational resource providing Solar Matching Services to homeowners, Cost Calculator and Equipment Guides.",
-    image: "bistro.gif",
+    image: "/pathtogreenhomes.png",
     technologies: ["Javascript", "React", "NextJS", "TailwindCSS", "Pocketbase", "Node.js", "SQL", "API Integration", "Razorpay", "Leaflet", "Framer Motion", "Responsive Design", "SEO Management", "Performance Optimization", "Single Page Applications (SPA)", "SiteMaps and Robots.txt"],
     link: "https://pathtogreenhomes.com",
     github: "NA",
@@ -14,7 +24,7 @@ export const projects = [
     subtitle: "World Wide Vibes Hackathon 2026 Submission",
     description:
       "StormShield AI — Montgomery's Smart Flood & Weather Guardian is a real-time flood prediction and civic alert system designed for Montgomery, Alabama. It uses AI to predict floods and alert citizens about the danger.",
-    image: "bistro.gif",
+    image: "/stormshieldai.jpg",
     technologies: ["Streamlit", "Python", "Folium (Leaflet.js Mapping)", "FastAPI", "BrightData", "ML/AI: XGBoost, Scikit-learn, Google Generative AI (Gemini 2.0 Flash)"],
     link: "https://stormshieldai-montgomery.streamlit.app/",
     github: "https://github.com/garimashingal/StormShieldAI",
@@ -24,7 +34,7 @@ export const projects = [
     subtitle: "ChatGPT Clone",
     description:
       "A ChatGPT-like web application built with modern frontend technologies, featuring real-time AI chat, responsive UI, and scalable architecture.",
-    image: "bistro.gif",
+    image: "/chatgpt_messenger.jpg",
     technologies: ["Typescript", "React", "TailwindCSS", "NextJS", "OpenAI API", "NextAuthJS", "Firebase", "FireStore", "Google Cloud Platform", "API Integration", "Responsive Design"],
     link: "https://project-jg7n4.vercel.app",
     github: "https://github.com/garimashingal/chatgpt-messenger",
@@ -34,7 +44,7 @@ export const projects = [
     subtitle: "Restaurant Website",
     description:
       "A modern, responsive restaurant platform with dynamic content loading from JSON. Features a seamless SPA experience with elegant menus and reservation sections.",
-    image: "bistro.gif",
+    image: "/bistro.gif",
     technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
     link: "https://garimashingal.github.io/myProjects/Restraunt%20Website%20-%20SPA/index.html",
     github: "https://github.com/garimashingal/myProjects/tree/main/Restraunt%20Website%20-%20SPA",
@@ -45,7 +55,7 @@ export const projects = [
     subtitle: "E-Learning Platform",
     description:
       "A comprehensive educational platform designed to facilitate online learning with a user-friendly interface and responsive design elements.",
-    image: "shineacademy.gif",
+    image: "/shineacademy.gif",
     technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
     link: "https://garimashingal.github.io/myProjects/Shine_Learning_Academy/",
     github: "https://github.com/garimashingal/myProjects/tree/main/Shine_Learning_Academy",
