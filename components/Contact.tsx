@@ -155,6 +155,7 @@ export default function Contact() {
             disabled={status === "loading"}
             aria-busy={status === "loading"}
             className={`flex items-center justify-center space-x-2 text-white bg-blue-600 border-0 py-3 px-8 focus:outline-none hover:bg-blue-700 rounded-lg text-lg font-semibold transition-all shadow-lg hover:shadow-blue-500/20 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95`}
+            suppressHydrationWarning
           >
             {status === "loading" ? "Sending..." : (
               <>
