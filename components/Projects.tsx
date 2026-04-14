@@ -1,6 +1,7 @@
 import { CodeBracketIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { projects } from "../data";
 import { SocialIcon } from "react-social-icons";
+import Image from "next/image";
 
 export default function Projects() {
   return (
@@ -32,11 +33,17 @@ export default function Projects() {
               <div className="w-full lg:w-3/5 group relative">
                 <div className="absolute -inset-2 bg-linear-to-r from-blue-500/10 dark:from-blue-500/20 to-blue-500/10 dark:to-blue-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-700"></div>
                 <div className="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl transition-all duration-500 group-hover:border-blue-500/30">
-                  <img
+                  {project.image !== "NA" ? (<Image
                     src={project.image}
                     alt={`${project.title} interface preview`}
+                    width={1000}
+                    height={1000}
                     className="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105"
-                  />
+                  />) : <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-slate-600 dark:text-slate-400 font-medium transition-colors">
+                      Coming Soon
+                    </span>
+                  </div>}
                   <div className="absolute inset-0 bg-linear-to-t from-slate-950/40 dark:from-slate-950/60 to-transparent pointer-events-none"></div>
                 </div>
               </div>
@@ -82,7 +89,7 @@ export default function Projects() {
                     <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2 transform transition group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
                   </a>
 
-                  {project.github && project.github !== "NA" && (
+                  {project.github && project.github !== "NA" ? (
                     <a
                       href={project.github}
                       target="_blank"
@@ -101,12 +108,9 @@ export default function Projects() {
                       </svg>
                       Source Code
                     </a>
-                  )}
-                  {project.github === "NA" && (
-                    <span className="inline-flex items-center text-slate-600 dark:text-slate-300 font-bold transition-all group/git">
-                      Source Code Not Available
-                    </span>
-                  )}
+                  ) : <span className="inline-flex items-center text-slate-600 dark:text-slate-300 font-bold transition-all group/git">
+                    Source Code Not Available
+                  </span>}
                 </div>
               </div>
             </div>
