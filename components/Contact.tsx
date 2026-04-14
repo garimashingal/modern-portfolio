@@ -53,7 +53,7 @@ export default function Contact() {
     <section id="contact" className="relative body-font bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300">
       <div className="container flex sm:flex-row flex-col px-5 mx-auto py-24 sm:flex-nowrap">
         {/* Map and Address Column */}
-        <div className="lg:w-2/3 md:w-1/2 bg-slate-100 dark:bg-slate-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative border border-slate-200 dark:border-slate-800 transition-colors">
+        <div className="lg:w-2/3 md:w-1/2 bg-slate-50 dark:bg-slate-900/50 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative border border-slate-200 dark:border-slate-800 transition-colors">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d185586.64608004698!2d-80.00472815190449!3d43.381386720053904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b63d2965d93b7%3A0xa44a27764c2b554f!2sBurlington%2C%20ON!5e0!3m2!1sen!2sca!4v1774471311896!5m2!1sen!2sca"
             width="100%"
@@ -112,6 +112,7 @@ export default function Contact() {
               value={name}
               className="w-full bg-slate-50 dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 text-base outline-none text-slate-900 dark:text-slate-100 py-2 px-4 leading-8 transition-all duration-200 ease-in-out"
               onChange={(e) => setName(e.target.value)}
+              suppressHydrationWarning
             />
           </div>
 
@@ -128,6 +129,7 @@ export default function Contact() {
               value={email}
               className="w-full bg-slate-50 dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 text-base outline-none text-slate-900 dark:text-slate-100 py-2 px-4 leading-8 transition-all duration-200 ease-in-out"
               onChange={(e) => setEmail(e.target.value)}
+              suppressHydrationWarning
             />
           </div>
 
@@ -144,6 +146,7 @@ export default function Contact() {
               rows={4}
               className="w-full bg-slate-50 dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 text-base outline-none text-slate-900 dark:text-slate-100 py-2 px-4 resize-none leading-6 transition-all duration-200 ease-in-out"
               onChange={(e) => setMessage(e.target.value)}
+              suppressHydrationWarning
             />
           </div>
 
@@ -152,6 +155,7 @@ export default function Contact() {
             disabled={status === "loading"}
             aria-busy={status === "loading"}
             className={`flex items-center justify-center space-x-2 text-white bg-blue-600 border-0 py-3 px-8 focus:outline-none hover:bg-blue-700 rounded-lg text-lg font-semibold transition-all shadow-lg hover:shadow-blue-500/20 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95`}
+            suppressHydrationWarning
           >
             {status === "loading" ? "Sending..." : (
               <>
