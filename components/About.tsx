@@ -20,7 +20,7 @@ export default function About() {
             and keeping pace with evolving industry trends to deliver
             cutting-edge digital solutions.
           </p> */}
-          <p className="mb-8 leading-relaxed text-black dark:text-slate-300 transition-colors font-normal">
+          <p className="mb-8 leading-relaxed text-slate-900 dark:text-slate-300 transition-colors font-normal">
             <span>I’m a Full-Stack Developer with 8+ years of experience, but for me, it’s always been about more than just code, it’s about creating experiences people enjoy. I’ve worked across roles and industries building responsive, scalable applications with React, Next.js, and Node.js, with a strong focus on clean architecture and thoughtful design.</span>
             <br />
             <br />

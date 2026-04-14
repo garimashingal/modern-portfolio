@@ -1,13 +1,17 @@
 @import "tailwindcss";
+@config "../tailwind.config.ts";
+
+/* Tailwind v4: define the dark variant to match data-theme="dark" set by next-themes */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 :root {
   --background: #ffffff;
-  --foreground: #020617; /* slate-950 */
+  --foreground: #020617;
 }
 
-.dark {
-  --background: #020617; /* slate-950 */
-  --foreground: #f8fafc; /* slate-50 */
+[data-theme="dark"] {
+  --background: #020617;
+  --foreground: #f8fafc;
 }
 
 @theme inline {
@@ -15,7 +19,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --variant-dark: :where(.dark, [data-theme="dark"]) &;
 }
 
 body {
@@ -23,4 +26,65 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ─── Projects Section – direct dark overrides ─────────────────────────────── */
+
+[data-theme="dark"] #projects {
+  background-color: #020617;
+  /* slate-950 */
+  color: #cbd5e1;
+  /* slate-300 */
+}
+
+[data-theme="dark"] #projects h2 {
+  color: #f8fafc;
+  /* slate-50 */
+}
+
+[data-theme="dark"] #projects p {
+  color: #94a3b8;
+  /* slate-400 */
+}
+
+/* project title */
+[data-theme="dark"] #projects h3 {
+  color: #ffffff;
+}
+
+/* tech badge */
+[data-theme="dark"] #projects .tech-badge {
+  background-color: rgba(30, 41, 59, 0.8);
+  /* slate-800/80 */
+  color: #60a5fa;
+  /* blue-400 */
+  border-color: #334155;
+  /* slate-700 */
+}
+
+/* card border */
+[data-theme="dark"] #projects .project-card-border {
+  border-color: #1e293b;
+  /* slate-800 */
+}
+
+/* "Source Code Not Available" & github link text */
+[data-theme="dark"] #projects .github-link {
+  color: #cbd5e1;
+  /* slate-300 */
+}
+
+[data-theme="dark"] #projects .github-link:hover {
+  color: #ffffff;
+}
+
+/* ─── Footer – direct dark overrides ───────────────────────────────────────── */
+
+[data-theme="dark"] footer {
+  background-color: #020617;
+  /* slate-950 */
+  color: #64748b;
+  /* slate-500 */
+  border-top-color: #1e293b;
+  /* slate-800 */
 }

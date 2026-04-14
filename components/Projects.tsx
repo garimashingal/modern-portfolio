@@ -32,7 +32,7 @@ export default function Projects() {
               {/* Image Side */}
               <div className="w-full lg:w-3/5 group relative">
                 <div className="absolute -inset-2 bg-linear-to-r from-blue-500/10 dark:from-blue-500/20 to-blue-500/10 dark:to-blue-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-700"></div>
-                <div className="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl transition-all duration-500 group-hover:border-blue-500/30">
+                <div className="project-card-border relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl transition-all duration-500 group-hover:border-blue-500/30">
                   {project.image !== "NA" ? (<Image
                     src={project.image}
                     alt={`${project.title} interface preview`}
@@ -70,7 +70,7 @@ export default function Projects() {
                   {project.technologies?.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-slate-100 dark:bg-slate-800/80 text-blue-600 dark:text-blue-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-200 dark:border-slate-700 hover:border-blue-500/30 transition-colors shadow-sm"
+                      className="tech-badge bg-slate-100 dark:bg-slate-800/80 text-blue-600 dark:text-blue-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-200 dark:border-slate-700 hover:border-blue-500/30 transition-colors shadow-sm"
                     >
                       {tech}
                     </span>
@@ -94,7 +94,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-bold transition-all group/git"
+                      className="github-link inline-flex items-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-bold transition-all group/git"
                       aria-label={`View source code of ${project.title} on GitHub`}
                     >
                       <svg
@@ -108,7 +108,7 @@ export default function Projects() {
                       </svg>
                       Source Code
                     </a>
-                  ) : <span className="inline-flex items-center text-slate-600 dark:text-slate-300 font-bold transition-all group/git">
+                  ) : <span className="github-link inline-flex items-center text-slate-600 dark:text-slate-300 font-bold transition-all group/git">
                     Source Code Not Available
                   </span>}
                 </div>
