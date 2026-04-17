@@ -5,7 +5,9 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -50,7 +52,10 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative body-font bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300">
+    <section
+      id="contact"
+      className="relative body-font bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300"
+    >
       <div className="container flex sm:flex-row flex-col px-5 mx-auto py-24 sm:flex-nowrap">
         {/* Map and Address Column */}
         <div className="lg:w-2/3 md:w-1/2 bg-slate-50 dark:bg-slate-900/50 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative border border-slate-200 dark:border-slate-800 transition-colors">
@@ -79,7 +84,10 @@ export default function Contact() {
               <h2 className="title-font font-semibold text-slate-950 dark:text-white tracking-widest text-xs uppercase">
                 Email
               </h2>
-              <a href="mailto:er.garimasinghal@gmail.com" className="text-blue-600 dark:text-blue-400 leading-relaxed hover:text-blue-500 dark:hover:text-blue-300 transition-colors font-medium">
+              <a
+                href="mailto:er.garimasinghal@gmail.com"
+                className="text-blue-600 dark:text-blue-400 leading-relaxed hover:text-blue-500 dark:hover:text-blue-300 transition-colors font-medium"
+              >
                 er.garimasinghal@gmail.com
               </a>
             </div>
@@ -96,11 +104,15 @@ export default function Contact() {
             Get in Touch
           </h2>
           <p className="leading-relaxed mb-5 text-slate-600 dark:text-slate-400 font-medium transition-colors">
-            Have a project in mind? Let's discuss how we can build something amazing together.
+            Have a project in mind? Let&apos;s discuss how we can build
+            something amazing together.
           </p>
 
           <div className="relative mb-4">
-            <label htmlFor="name" className="leading-7 text-sm text-slate-600 dark:text-slate-400 font-medium">
+            <label
+              htmlFor="name"
+              className="leading-7 text-sm text-slate-600 dark:text-slate-400 font-medium"
+            >
               Name
             </label>
             <input
@@ -117,7 +129,10 @@ export default function Contact() {
           </div>
 
           <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-slate-600 dark:text-slate-400 font-medium">
+            <label
+              htmlFor="email"
+              className="leading-7 text-sm text-slate-600 dark:text-slate-400 font-medium"
+            >
               Email
             </label>
             <input
@@ -134,7 +149,10 @@ export default function Contact() {
           </div>
 
           <div className="relative mb-4">
-            <label htmlFor="message" className="leading-7 text-sm text-slate-600 dark:text-slate-400 font-medium">
+            <label
+              htmlFor="message"
+              className="leading-7 text-sm text-slate-600 dark:text-slate-400 font-medium"
+            >
               Message
             </label>
             <textarea
@@ -153,11 +171,13 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === "loading"}
-            aria-busy={status === "loading"}
+            // aria-busy={status === "loading"}
             className={`flex items-center justify-center space-x-2 text-white bg-blue-600 border-0 py-3 px-8 focus:outline-none hover:bg-blue-700 rounded-lg text-lg font-semibold transition-all shadow-lg hover:shadow-blue-500/20 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95`}
             suppressHydrationWarning
           >
-            {status === "loading" ? "Sending..." : (
+            {status === "loading" ? (
+              "Sending..."
+            ) : (
               <>
                 <PaperAirplaneIcon className="w-5 h-5 -rotate-45" />
                 <span>Send Message</span>
@@ -165,12 +185,26 @@ export default function Contact() {
             )}
           </button>
 
-          <div role="status" aria-live="polite" className="mt-3 text-center transition-opacity">
+          <div
+            role="status"
+            aria-live="polite"
+            className="mt-3 text-center transition-opacity"
+          >
             {status === "success" && (
-              <p id="success-message" className="text-blue-600 dark:text-blue-400 text-sm font-bold">Form submitted successfully!</p>
+              <p
+                id="success-message"
+                className="text-blue-600 dark:text-blue-400 text-sm font-bold"
+              >
+                Form submitted successfully!
+              </p>
             )}
             {status === "error" && (
-              <p id="error-message" className="text-red-500 dark:text-red-400 text-sm font-bold">Failed to send. Please try again.</p>
+              <p
+                id="error-message"
+                className="text-red-500 dark:text-red-400 text-sm font-bold"
+              >
+                Failed to send. Please try again.
+              </p>
             )}
           </div>
         </form>

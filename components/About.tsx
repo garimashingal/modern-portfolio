@@ -4,7 +4,7 @@ export default function About() {
       <div className="container mx-auto flex px-10 py-10 items-center flex-col md:flex-row">
         <div className="lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-8 md:mb-20 items-center text-center">
           <h1 className=" title-font sm:text-4xl text-3xl mb-4 font-bold text-foreground transition-colors">
-            Hi 👋, I am Garima Shingal.
+            Hi 👋, I am Garima Shingal
             <br />
             Full Stack developer
           </h1>
@@ -21,10 +21,24 @@ export default function About() {
             cutting-edge digital solutions.
           </p> */}
           <p className="mb-8 leading-relaxed text-slate-900 dark:text-slate-300 transition-colors font-normal">
-            <span>I’m a Full-Stack Developer with 8+ years of experience, but for me, it’s always been about more than just code, it’s about creating experiences people enjoy. I’ve worked across roles and industries building responsive, scalable applications with React, Next.js, and Node.js, with a strong focus on clean architecture and thoughtful design.</span>
+            <span>
+              I’m a Software Engineer with 8+ years of experience, and for me,
+              it’s always been about more than just code, it’s about creating
+              experiences people enjoy. I’ve worked across different domains,
+              building responsive and scalable applications using JavaScript,
+              TypeScript, and modern web technologies, with a strong focus on
+              clean architecture and thoughtful design.
+            </span>
             <br />
             <br />
-            <span>I enjoy turning ideas into real, impactful products, bridging the gap between design and development across the full lifecycle. Always curious and learning, I’m constantly exploring new technologies and AI-driven approaches to build better, future-ready solutions.</span></p>
+            <span>
+              I enjoy turning ideas into real, impactful products and working
+              across the full lifecycle, bridging the gap between design and
+              development. I’m always curious and continuously learning,
+              exploring new technologies and AI-driven approaches to build
+              better, future-ready solutions.
+            </span>
+          </p>
 
           <div className="flex justify-center">
             <a
