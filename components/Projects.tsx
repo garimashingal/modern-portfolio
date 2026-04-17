@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-300 py-24 overflow-hidden transition-colors duration-300"
+      className="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-300 pt-10 pb-24 overflow-hidden transition-colors duration-300"
     >
       <div className="container px-5 mx-auto">
         <div className="flex flex-col w-full mb-24 text-center">
