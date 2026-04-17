@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function About() {
   return (
     <section id="about" className=" lg:pt-16">
@@ -10,16 +11,6 @@ export default function About() {
           </h1>
           <br />
           <br />
-          {/* 
-          <p className="mb-8 leading-relaxed text-slate-600 dark:text-slate-300 transition-colors">
-            I am a dedicated Full-Stack Developer with 8+ years of professional
-            experience in various organizations, specializing in building
-            highly responsive and accessible applications using HTML, CSS,
-            JavaScript, React, and Next.js, backed by solid backend expertise in
-            Node.js and RESTful APIs. I am passionate about continuous learning
-            and keeping pace with evolving industry trends to deliver
-            cutting-edge digital solutions.
-          </p> */}
           <p className="mb-8 leading-relaxed text-slate-900 dark:text-slate-300 transition-colors font-normal">
             <span>
               I’m a Software Engineer with 8+ years of experience, and for me,
@@ -56,11 +47,13 @@ export default function About() {
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-72 md:w-1/2 w-5/6">
-          <img
-            src="garima.jpeg"
+          <Image
+            src="/garima.jpeg"
             className="object-center object-cover rounded-full"
-            alt="Portfolio"
-          ></img>
+            alt="Portfolio Image - Garima Shingal"
+            width={400}
+            height={400}
+          ></Image>
         </div>
       </div>
     </section>

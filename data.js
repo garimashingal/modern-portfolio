@@ -3,7 +3,7 @@ export const projects = [
     title: "StormShield AI",
     subtitle: "World Wide Vibes Hackathon 2026 Submission",
     description:
-      "StormShield AI — Montgomery's Smart Flood & Weather Guardian is a real-time flood prediction and civic alert system designed for Montgomery, Alabama. It was a vibe coding project that uses AI to predict floods and alert citizens about the danger.",
+      "Built an AI-powered flood prediction system serving real-time alerts, for Montgomery, Alabama, as part of the World Wide Vibes Hackathon 2026. The system integrates real-time weather data, historical flood patterns, and local infrastructure information to provide accurate flood forecasts. It features an intuitive interface for users to receive timely alerts and access safety resources, aiming to enhance community resilience against flooding events.",
     image: "/stormshieldai.jpg",
     technologies: [
       "Streamlit",
@@ -83,7 +83,7 @@ export const projects = [
       "Text-to-Speech",
       "Vercel",
     ],
-    link: "NA",
+    link: "https://github.com/garimashingal/Interview-Simulator",
     github: "https://github.com/garimashingal/Interview-Simulator",
   },
   {
