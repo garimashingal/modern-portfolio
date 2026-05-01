@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function About() {
   return (
-    <section id="about" className=" lg:pt-16 md:pt-8 pt-6">
+    <section id="about" className="pt-10 md:pt-40">
       <div className="container mx-auto flex px-10 pb-10  items-center flex-col-reverse md:flex-row">
         <div className="lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left md:mb-20 items-center text-center">
           <div className="text-blue-700 bg-blue-200 px-2 py-1 rounded mb-4 text-xs flex items-center gap-1">
@@ -15,28 +15,13 @@ export default function About() {
           <br />
           <p className="mb-8 text-md text-slate-600 dark:text-slate-400 leading-relaxed font-medium transition-colors">
             <span>
-              I’m a Full Stack Developer with a background in software engineering,
-              and for me, it’s always been about more than just code, it’s about creating
-              experiences people genuinely enjoy.
-              I’ve worked across different domains, building responsive and scalable
-              applications using React, Next.js, TypeScript, and modern web technologies,
-              with a strong focus on clean architecture and thoughtful, user-centric design.
-            </span>
-            <br />
-            <br />
-            <span>I enjoy turning ideas into real, impactful products and working across the
-              full development lifecycle, bridging the gap between design and development
-              to build intuitive, reliable, and high-performing applications.
-              While my primary focus is on crafting seamless frontend experiences,
-              I am equally comfortable working across the full stack, integrating APIs and
-              supporting backend systems when needed.
-            </span>
-            <br />
-            <br />
-            <span>
-              I am curious and continuously learning, exploring new tools and
-              AI-assisted approaches to build better, more efficient, and future-ready
-              solutions.
+              I am a Full Stack Developer, focused on building high-quality, user-centric applications.
+              My experience spans multiple domains, where I have developed responsive
+              and scalable solutions using JavaScript, TypeScript, React, Node.js, and modern web
+              technologies, with a growing focus on integrating AI-driven features. I emphasize clean architecture, maintainable code, and
+              thoughtful design to deliver seamless user experiences. I enjoy transforming ideas into impactful products and contributing across
+              the entire development lifecycle, effectively bridging the gap between
+              design and engineering.
             </span>
           </p>
 
