@@ -21,9 +21,9 @@ export default function SkillsTab() {
   }, [searchParams]);
   //  text-slate-900 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-700 focus:outline-none hover:text-slate-900 dark:hover:text-white text-lg transition-all active:scale-95"
   let tabClasses =
-    "lg:w-40 w-28 rounded mr-2 p-2 text-slate-900 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 focus:outline-none text-lg transition-all";
+    "lg:w-40 w-28 rounded mr-2 p-2 text-slate-900 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 focus:outline-none text-md transition-all";
   let activeTabClass =
-    "lg:w-40 w-28 rounded mr-2 p-2 text-white bg-blue-600 border-0 focus:outline-none text-lg shadow-lg shadow-blue-500/20 transition-all";
+    "lg:w-40 w-28 rounded mr-2 p-2 text-white bg-blue-600 border-0 focus:outline-none text-md shadow-lg shadow-blue-500/20 transition-all";
   return (
     <div className="container w-full text-center mx-auto">
       <div id="tabs" className="flex justify-center items-center text-center" role="tablist" aria-label="Skills, Experience, and Education tabs">
